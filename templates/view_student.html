@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Student Grades</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <!-- Accede correctamente al nombre del estudiante -->
+    <h1>Grades of {{ student['name'] }}</h1>
+    <img src="data:image/png;base64,{{ graph_url }}" alt="Student Performance Graph">
+
+    <h3>Grades:</h3>
+    <ul>
+        <!-- Mostrar las calificaciones -->
+        {% for grade in grades %}
+            <li>{{ grade['subject'] }}: {{ grade['grade'] }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('index') }}">Back to Students</a>
+</body>
+</html>

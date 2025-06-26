@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grades</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Students</h1>
+    <a href="{{ url_for('add_student') }}">Add Student</a>
+    <ul>
+        {% for student in students %}
+            <li>
+                {{ student['name'] }} <!-- Aquí se accede con la clave 'name' ya que es un diccionario -->
+                <a href="{{ url_for('view_student', student_id=student['id']) }}">View Grades</a> <!-- Acceder con 'id' -->
+                <a href="{{ url_for('add_grade', student_id=student['id']) }}">Add Grade</a> <!-- Acceder con 'id' -->
+                <form method="POST" action="{{ url_for('delete_student', student_id=student['id']) }}" style="display:inline;">
+                    <button type="submit">Delete</button> <!-- Eliminar estudiante -->
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

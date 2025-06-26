@@ -1,0 +1,233 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2C3E50;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #34495E;
+}
+
+/* Enlaces */
+a {
+    color: #2980B9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botones */
+button {
+    background-color: #2980B9;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1ABC9C;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las listas */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    background-color: #ecf0f1;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li:hover {
+    background-color: #d5e0e8;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+    padding: 10px;
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus {
+    border-color: #2980B9;
+    outline: none;
+}
+
+/* Vista del gráfico */
+.graph-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.graph-container img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos específicos para las vistas de estudiantes */
+.view-student-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.view-student-container ul {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.view-student-container li {
+    background-color: #f7f8f8;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-student-container li:hover {
+    background-color: #f2f3f4;
+}
+
+/* Diseño para el formulario de calificación */
+.add-grade-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.add-grade-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495E;
+}
+
+.add-grade-form input[type="text"],
+.add-grade-form input[type="number"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.add-grade-form input[type="text"]:focus,
+.add-grade-form input[type="number"]:focus {
+    border-color: #2980B9;
+    outline: none;
+}
+
+.add-grade-form button {
+    align-self: center;
+}
+
+/* Estilo del contenedor de los estudiantes */
+.index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.index-container ul {
+    display: block;
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+.index-container li {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.index-container li:hover {
+    background-color: #f9fafb;
+}
+
+.index-container a {
+    margin: 0 10px;
+}
+
+/* Adaptación responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .add-grade-form {
+        width: 100%;
+    }
+
+    .view-student-container {
+        width: 100%;
+    }
+}
